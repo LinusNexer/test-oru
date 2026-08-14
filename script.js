@@ -1,4 +1,4 @@
-async function loadData() {
+(async () => {
     try {
         const response = await axios.get("./data.json");
         const data = response.data;
@@ -11,6 +11,5 @@ async function loadData() {
     } catch (error) {
         console.error("Failed to load data.json:", error);
     }
-}
+})()
 
-loadData();
